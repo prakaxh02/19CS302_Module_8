@@ -1,40 +1,56 @@
-## Hackerrank problem - 2
+## Task - Hackerrank Problem
 
-Your task is to take two numbers of int data type, two numbers of float data type as input and output their sum:
-Declare 4 variables: two of type int and two of type float.
-Read 2 lines of input from stdin (according to the sequence given in the 'Input Format' section below) and initialize your variables.
-Use the + and - operator to perform the following operations:
-Print the sum and difference of two int variable on a new line.
-Print the sum and difference of two float variable rounded to one decimal place on a new line.
+Given a positive integer denoting , do the following:
+If  41<=n <=49 print the lowercase English word corresponding to the number (e.g., forty one for 41 , forty two for 42 etc.).
+If n>49 print Greater than 49.
 
+## Sample Input
+41
+## Sample Output
+forty one
 ## AIM:
-To write a C program to find the sum and difference of two integers and two float numbers entered by the user.
+To write a C program that prints the lowercase English word for numbers between 41 and 49, and prints "Greater than 49" if the number is more than 49.
 ## ALGORITHM:
 1. Start.
-2. Declare two int and two float variables.
-3. Read two integers from the user.
-4. Read two float numbers from the user.
-5. Calculate and print the sum and difference of the integers.
-6. Calculate and print the sum and difference of the floats.
-7. End.
+2. Read an integer n from the user.
+3. If 41 <= n <= 49, print "forty" and the corresponding word for the unit digit.
+4. Else if n > 49, print "Greater than 49"
+5. End.
 ## PROGRAM:
 ```
 #include <stdio.h>
-int main()
-{
-    int a, b;
-    float x, y;
-    printf("Enter two integers: ");
-    scanf("%d %d", &a, &b);
-    printf("Enter two floats: ");
-    scanf("%f %f", &x, &y);
-    printf("%d %d\n", a + b, a - b);
-    printf("%.1f %.1f\n", x + y, x - y);
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    if (n >= 41 && n <= 49)
+  {
+        printf("forty ");
+        switch(n)
+       {
+            case 41: printf("one\n"); break;
+            case 42: printf("two\n"); break;
+            case 43: printf("three\n"); break;
+            case 44: printf("four\n"); break;
+            case 45: printf("five\n"); break;
+            case 46: printf("six\n"); break;
+            case 47: printf("seven\n"); break;
+            case 48: printf("eight\n"); break;
+            case 49: printf("nine\n"); break;
+        }
+    }
+    else if (n > 49)
+    {
+        printf("Greater than 49\n");
+    }
     return 0;
 }
 ```
-## OUTPUT:
-![Screenshot 2025-05-07 164549](https://github.com/user-attachments/assets/2e2af757-bc2a-4f45-a06b-c3def8a4236d)
+
+## OUTPUT
+![Screenshot 2025-05-07 170211](https://github.com/user-attachments/assets/33978d5a-990a-458e-9905-5bcfae6f7acf)
+
 
 ## RESULT:
 Thus, the program is executed and verified successfully.
